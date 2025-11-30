@@ -7,7 +7,7 @@
 clone the repo
 
 ```
-git clone git@github.com:anasimran101/myelocare.git
+git clone https://github.com/anasimran101/myelocare.git
 ```
 
 clone the MMDB dataset in root folder   
@@ -16,7 +16,9 @@ clone the MMDB dataset in root folder
 
 ```
 cd myelocare
-git clone git@github.com:LabIA-UFBA/MMDB.git
+mkdir datasets
+cd datasets
+git clone https://github.com/LabIA-UFBA/MMDB.git
 ```
 
 Then adjust the configurations in yolosimulation/config.py and pyproject.toml
