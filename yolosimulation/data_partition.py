@@ -82,3 +82,18 @@ def create_partitions(dataset_dir, output_dir, no_of_clients, class_names, ratio
         # Move start index forward
         start_idx = end_idx
 
+    # Derive train and val directories from VAL_YAML_FILE
+    train_img_dir = str(Path(VAL_YAML_FILE).parent / "images").replace("\\", "/")
+
+    # Create YAML data
+    yaml_data = {
+        "train": train_img_dir,
+        "val": train_img_dir,
+        "nc": len(class_names),
+        "names": class_names,
+    }
+
+    # Write to YAML
+    with open(VAL_YAML_FILE, "w") as f:
+        yaml.dump(yaml_data, f)
+

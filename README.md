@@ -23,7 +23,7 @@ git clone https://github.com/LabIA-UFBA/MMDB.git
 
 Then adjust the configurations in yolosimulation/config.py and pyproject.toml
 
-To run on GPU 
+To run on GPU from root
 
 ```
 flwr run . local-simulation-gpu
@@ -34,6 +34,7 @@ Results will be saved in runs folder
 ##  Dependencies
 ```
 pip install wandb flwr
+pip install -U [flwr-simulation]
 ```
 
 
