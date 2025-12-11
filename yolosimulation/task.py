@@ -109,7 +109,9 @@ def create_run_dir(config: dict):
     print(RUN_DIR)
     save_path = RUN_DIR / "server_aggregated_results"
     save_path.mkdir(parents=True, exist_ok=True)
-
+    config["pretained-model"] = MODEL_PATH
+    config["device"] = str(DEVICE)
+    config["timestamp"] = datetime.now().strftime("%Y%m%d-%H%M%S")
     with open(save_path / "run_config.json", "w", encoding="utf-8") as fp:
         json.dump(config, fp, indent=2)
 
