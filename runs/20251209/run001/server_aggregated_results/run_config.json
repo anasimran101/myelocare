@@ -5,5 +5,8 @@
   "learning-rate": 0.001,
   "batch-size": 1,
   "num-clients": 3,
-  "run-partitioner": 1
+  "run-partitioner": 1,
+  "pretrained-model": "pretrained_models/pmmdc_150epochs/best.pt",
+  "device": "cuda:0",
+  "timestamp": "20251209-153045"
 }
