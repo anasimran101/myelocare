@@ -1,7 +1,7 @@
 import torch
 from flwr.app import ArrayRecord, ConfigRecord, Context, MetricRecord
 from flwr.serverapp import Grid, ServerApp
-from yolosimulation.strategy import CustomFedAvg
+from yolosimulation.strategy import CustomFedAvg, CustomFedAvg, STRATEGY_REGISTRY, load_strategy
 
 from yolosimulation.task import get_model, test, create_run_dir, make_project_name
 from yolosimulation.data_partition import create_partitions
@@ -56,6 +56,7 @@ def main(grid: Grid, context: Context) -> None:
     local_epochs = context.run_config.get("local-epochs", LOCAL_EPOCHS)
     batch_size = context.run_config.get("batch-size", BATCH_SIZE)
     num_clients = context.run_config.get("num-clients", NUM_CLIENTS)
+    strategy_name = context.run_config.get("strategy", STRATEGY_NAME)
 
     if(run_partitioner):
         create_partitions(MAIN_DATASET_PATH, DATASET_PATH,NUM_CLIENTS, CLASSES, [ 1/num_clients for i in range(0, num_clients) ], val_ratio=fraction_evaluate)
@@ -66,8 +67,9 @@ def main(grid: Grid, context: Context) -> None:
     # FIX: correct conversion to Flower arrays
     arrays = ArrayRecord(global_model.model.state_dict())
 
-    strategy = CustomFedAvg(
-        fraction_evaluate=fraction_evaluate
+    strategy = load_strategy(
+        strategy_name=strategy_name,
+        fraction_evaluate=fraction_evaluate,
     )
     gen_run_dir()
     save_path, run_dir = create_run_dir(config=context.run_config)

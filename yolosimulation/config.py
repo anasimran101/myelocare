@@ -22,3 +22,4 @@ MODEL_PATH = "pretrained_models/pmmdc_5epochs/best.pt"
 
 # ===== DEVICE =====
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
+STRATEGY_NAME = "FedAvg"
