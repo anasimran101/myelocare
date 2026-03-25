@@ -52,13 +52,13 @@ def main(grid: Grid, context: Context) -> None:
     fraction_evaluate = context.run_config.get("fraction-evaluate", 0.5)
     num_rounds = context.run_config.get("num-server-rounds", 1)
     lr = context.run_config.get("learning-rate", 0.001)
-    run_partitioner = context.run_config.get("run-partitioner", RUN_PARTITIONER)
+    partitioner = context.run_config.get("run-partitioner", PARTITIONER)
     local_epochs = context.run_config.get("local-epochs", LOCAL_EPOCHS)
     batch_size = context.run_config.get("batch-size", BATCH_SIZE)
     num_clients = context.run_config.get("num-clients", NUM_CLIENTS)
     strategy_name = context.run_config.get("strategy", STRATEGY_NAME)
 
-    if(run_partitioner):
+    if(partitioner != "none"):
         create_partitions(MAIN_DATASET_PATH, DATASET_PATH,NUM_CLIENTS, CLASSES, [ 1/num_clients for i in range(0, num_clients) ], val_ratio=fraction_evaluate)
 
     # Load initial YOLOv8 model
