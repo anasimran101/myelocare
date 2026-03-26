@@ -36,13 +36,13 @@ for ARG in "$@"; do
             echo "Invalid argument: $ARG"
             exit 1
             ;;
-        esac
-    done
-fi
+    esac
+done
+
 
 # Check if the script is being run from the correct directory
-if [ ! -d "myelocare" ]; then
-  echo "Please run this script from the root directory of the project (myelocare)"
+if [[ "$(basename "$(pwd)")" != "myelocare" ]]; then
+  echo "Please run this script from the myelocare directory"
   exit 1
 fi
 
