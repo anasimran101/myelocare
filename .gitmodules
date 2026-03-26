@@ -1,3 +1,6 @@
 [submodule "datasets/MMDB"]
 	path = datasets/MMDB
 	url = https://github.com/LabIA-UFBA/MMDB.git
+[submodule "datasets/synthetic_datasets"]
+	path = datasets/synthetic_datasets
+	url = git@github.com:anasimran101/myelocare_datasets.git
