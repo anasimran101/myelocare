@@ -1,0 +1,3 @@
+[submodule "datasets/MMDB"]
+	path = datasets/MMDB
+	url = https://github.com/LabIA-UFBA/MMDB.git
