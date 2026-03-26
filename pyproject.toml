@@ -30,6 +30,7 @@ learning-rate = 0.001
 batch-size = 1
 num-clients = 3
 partitioner = "none"
+strategy = "FedAvg"
 
 
 [tool.flwr.federations]
@@ -41,4 +42,4 @@ options.num-supernodes = 3
 [tool.flwr.federations.local-simulation-gpu]
 options.num-supernodes = 3
 options.backend.client-resources.num-cpus = 2 # each ClientApp assumes to use 1CPUs
-options.backend.client-resources.num-gpus = 0.5 # at most ClientApp will run in a given GPU concurrently
+options.backend.client-resources.num-gpus = 0.3 # at most ClientApp will run in a given GPU concurrently

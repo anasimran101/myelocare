@@ -5,10 +5,16 @@ import torch
 BASE_PATH = Path.cwd()  # current working directory
 
 # ===== DATASET PATHS =====
-DATASET_PATH = str(BASE_PATH / "datasets/MMDB/data/detection/flower")
-VAL_YAML_FILE = str(BASE_PATH / "datasets/MMDB/data/detection/patients/patient 01/patient01.yaml")
-MAIN_DATASET_PATH = str(BASE_PATH / "datasets/MMDB/data/detection")
-DATA_PATH = str(BASE_PATH / "datasets/MMDB/data/detection/train")
+# DATASET_PATH = str(BASE_PATH / "datasets/MMDB/data/detection/flower")
+# VAL_YAML_FILE = str(BASE_PATH / "datasets/MMDB/data/detection/patients/patient 01/patient01.yaml")
+# MAIN_DATASET_PATH = str(BASE_PATH / "datasets/MMDB/data/detection")
+# DATA_PATH = str(BASE_PATH / "datasets/MMDB/data/detection/train")
+
+DATASET_PATH = str(BASE_PATH /          "datasets/merged_data/flower")
+VAL_YAML_FILE = str(BASE_PATH /         "datasets/MMDB/data/detection/patients/patient 01/patient01.yaml")
+MAIN_DATASET_PATH = str(BASE_PATH /     "datasets/merged_data")
+DATA_PATH = str(BASE_PATH /             "datasets/merged_data")
+
 
 # ===== OTHER CONFIG =====
 NUM_CLIENTS = 3
