@@ -52,7 +52,8 @@ fi
 if [ ! -d "$ORIGINAL_DATASET_PATH" ]; then
   echo "Original dataset path does not exist: $ORIGINAL_DATASET_PATH"
   exit 1
-fi  
+fi
+  
 #check if synthetic dataset path exists
 if [ ! -d "$SYNTHETIC_DATASET_PATH" ]; then
   echo "Synthetic dataset path does not exist: $SYNTHETIC_DATASET_PATH"
@@ -61,7 +62,7 @@ fi
 
 #check if merged dataset path exists, if yes delete it and create a new one
 if [ -d "$MERGED_DATASET_PATH" ]; then
-    rmdir -rf "$MERGED_DATASET_PATH"
+    rm -rf "$MERGED_DATASET_PATH"
 fi
 mkdir -p "$MERGED_DATASET_PATH"
 
@@ -73,11 +74,11 @@ if [ ! -d "$MERGED_DATASET_PATH/labels" ]; then
   mkdir -p "$MERGED_DATASET_PATH/labels"
 fi 
 
-cp -r "$ORIGINAL_DATASET_PATH"/images "$MERGED_DATASET_PATH/images"
-cp -r "$ORIGINAL_DATASET_PATH"/labels "$MERGED_DATASET_PATH/labels"
+cp -r "$ORIGINAL_DATASET_PATH"/images/* "$MERGED_DATASET_PATH/images"
+cp -r "$ORIGINAL_DATASET_PATH"/labels/* "$MERGED_DATASET_PATH/labels"
 
-cp -r "$SYNTHETIC_DATASET_PATH"/images/* "$MERGED_DATASET_PATH"/images/
-cp -r "$SYNTHETIC_DATASET_PATH"/labels/* "$MERGED_DATASET_PATH"/labels/
+cp -r "$SYNTHETIC_DATASET_PATH"/images/* "$MERGED_DATASET_PATH/images"
+cp -r "$SYNTHETIC_DATASET_PATH"/labels/* "$MERGED_DATASET_PATH/labels"
 
 
 # make a readme with the rich details of the merged dataset
