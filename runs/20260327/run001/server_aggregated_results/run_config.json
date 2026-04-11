@@ -1,0 +1,13 @@
+{
+  "num-server-rounds": 50,
+  "fraction-evaluate": 0.2,
+  "local-epochs": 5,
+  "learning-rate": 0.001,
+  "batch-size": 1,
+  "num-clients": 3,
+  "partitioner": "noniid",
+  "strategy": "FedAvg",
+  "pretained-model": "pretrained_models/pmmdc_5epochs/best.pt",
+  "device": "cuda:0",
+  "timestamp": "20260327-002201"
+}

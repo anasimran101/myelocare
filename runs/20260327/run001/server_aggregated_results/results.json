@@ -1,0 +1,1252 @@
+[
+  {
+    "round": 1,
+    "train_metrics": {
+      "metrics/precision(B)": 0.5846412969286257,
+      "metrics/recall(B)": 0.6981535921624933,
+      "metrics/mAP50(B)": 0.6593781984701784,
+      "metrics/mAP50-95(B)": 0.5263757994744941,
+      "fitness": 0.5263757994744941
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6088380907271994,
+      "metrics/recall(B)": 0.6642066381196223,
+      "metrics/mAP50(B)": 0.6779865827042731,
+      "metrics/mAP50-95(B)": 0.5506786869263975,
+      "fitness": 0.5506786869263975
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7058626272390878,
+      "metrics/recall(B)": 0.8335543586256542,
+      "metrics/mAP50(B)": 0.8377569249253843,
+      "metrics/mAP50-95(B)": 0.7114515961670269,
+      "fitness": 0.7114515961670269,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 2,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6123662501474483,
+      "metrics/recall(B)": 0.6973476535393884,
+      "metrics/mAP50(B)": 0.6954898814807887,
+      "metrics/mAP50-95(B)": 0.5603115730142689,
+      "fitness": 0.5603115730142689
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6228138567628936,
+      "metrics/recall(B)": 0.6761184197172552,
+      "metrics/mAP50(B)": 0.6605145912001288,
+      "metrics/mAP50-95(B)": 0.5436162358170549,
+      "fitness": 0.5436162358170549
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7948511313856099,
+      "metrics/recall(B)": 0.7402217186149688,
+      "metrics/mAP50(B)": 0.851991496920788,
+      "metrics/mAP50-95(B)": 0.729389276895281,
+      "fitness": 0.729389276895281,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 3,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6249770617846624,
+      "metrics/recall(B)": 0.7028793862331504,
+      "metrics/mAP50(B)": 0.6977308286707622,
+      "metrics/mAP50-95(B)": 0.5581065432272854,
+      "fitness": 0.5581065432272854
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6393847782472215,
+      "metrics/recall(B)": 0.7149282907660647,
+      "metrics/mAP50(B)": 0.7221408051372478,
+      "metrics/mAP50-95(B)": 0.588286969550169,
+      "fitness": 0.588286969550169
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7972656022187932,
+      "metrics/recall(B)": 0.746615570627281,
+      "metrics/mAP50(B)": 0.8423252813198274,
+      "metrics/mAP50-95(B)": 0.7168410246859606,
+      "fitness": 0.7168410246859606,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 4,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6332624647963687,
+      "metrics/recall(B)": 0.6966718252046584,
+      "metrics/mAP50(B)": 0.7077649531475343,
+      "metrics/mAP50-95(B)": 0.5689777716233676,
+      "fitness": 0.5689777716233676
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6785332124199248,
+      "metrics/recall(B)": 0.6846206656797422,
+      "metrics/mAP50(B)": 0.7241229587303619,
+      "metrics/mAP50-95(B)": 0.5835465659720795,
+      "fitness": 0.5835465659720795
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8145927325438815,
+      "metrics/recall(B)": 0.7719512195121951,
+      "metrics/mAP50(B)": 0.8690258974353469,
+      "metrics/mAP50-95(B)": 0.754236364940596,
+      "fitness": 0.754236364940596,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 5,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6321109762609272,
+      "metrics/recall(B)": 0.6970455931171058,
+      "metrics/mAP50(B)": 0.6972345713111507,
+      "metrics/mAP50-95(B)": 0.5658385000698568,
+      "fitness": 0.5658385000698568
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.622883891446188,
+      "metrics/recall(B)": 0.7432711248130799,
+      "metrics/mAP50(B)": 0.7499453307058523,
+      "metrics/mAP50-95(B)": 0.6227928028187493,
+      "fitness": 0.6227928028187493
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7781375988872314,
+      "metrics/recall(B)": 0.8051071929634035,
+      "metrics/mAP50(B)": 0.8710810104180915,
+      "metrics/mAP50-95(B)": 0.7483646363390372,
+      "fitness": 0.7483646363390372,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 6,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6426763328270118,
+      "metrics/recall(B)": 0.6979200557437935,
+      "metrics/mAP50(B)": 0.7149870027941696,
+      "metrics/mAP50-95(B)": 0.5855819660389241,
+      "fitness": 0.5855819660389241
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6806967991155981,
+      "metrics/recall(B)": 0.6827015512016573,
+      "metrics/mAP50(B)": 0.7340016324450382,
+      "metrics/mAP50-95(B)": 0.6146789247802577,
+      "fitness": 0.6146789247802577
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7554620193690003,
+      "metrics/recall(B)": 0.817643779019481,
+      "metrics/mAP50(B)": 0.8643088572507136,
+      "metrics/mAP50-95(B)": 0.7437211922714086,
+      "fitness": 0.7437211922714086,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 7,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6306953668322332,
+      "metrics/recall(B)": 0.7501220168114965,
+      "metrics/mAP50(B)": 0.7206394515798913,
+      "metrics/mAP50-95(B)": 0.5872237905775279,
+      "fitness": 0.5872237905775279
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6527906894973499,
+      "metrics/recall(B)": 0.7409441283362959,
+      "metrics/mAP50(B)": 0.7384161796727895,
+      "metrics/mAP50-95(B)": 0.6173907956879479,
+      "fitness": 0.6173907956879479
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.818920640100018,
+      "metrics/recall(B)": 0.7539898948414201,
+      "metrics/mAP50(B)": 0.8643981544570866,
+      "metrics/mAP50-95(B)": 0.7490781046075694,
+      "fitness": 0.7490781046075694,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 8,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6632386254929422,
+      "metrics/recall(B)": 0.6856808528511528,
+      "metrics/mAP50(B)": 0.7178430867429261,
+      "metrics/mAP50-95(B)": 0.586000664176347,
+      "fitness": 0.586000664176347
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.672768910600811,
+      "metrics/recall(B)": 0.6783782110024508,
+      "metrics/mAP50(B)": 0.7251140874084552,
+      "metrics/mAP50-95(B)": 0.5912197063374658,
+      "fitness": 0.5912197063374658
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7684465059448653,
+      "metrics/recall(B)": 0.8184959349593496,
+      "metrics/mAP50(B)": 0.874873399047583,
+      "metrics/mAP50-95(B)": 0.7496574291618071,
+      "fitness": 0.7496574291618071,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 9,
+    "train_metrics": {
+      "metrics/precision(B)": 0.615306144497483,
+      "metrics/recall(B)": 0.7018891867043422,
+      "metrics/mAP50(B)": 0.705414396012448,
+      "metrics/mAP50-95(B)": 0.5752289111849654,
+      "fitness": 0.5752289111849654
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.673121019871356,
+      "metrics/recall(B)": 0.6960256155202407,
+      "metrics/mAP50(B)": 0.7337670304712323,
+      "metrics/mAP50-95(B)": 0.6038980133708967,
+      "fitness": 0.6038980133708967
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.6871087498672859,
+      "metrics/recall(B)": 0.8593140560992074,
+      "metrics/mAP50(B)": 0.8602800907210422,
+      "metrics/mAP50-95(B)": 0.7279222247867793,
+      "fitness": 0.7279222247867793,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 10,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6454220205005823,
+      "metrics/recall(B)": 0.6903632554241603,
+      "metrics/mAP50(B)": 0.7028957954836719,
+      "metrics/mAP50-95(B)": 0.5721814817179252,
+      "fitness": 0.5721814817179252
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6683649717134714,
+      "metrics/recall(B)": 0.6933667115108822,
+      "metrics/mAP50(B)": 0.7240068815603162,
+      "metrics/mAP50-95(B)": 0.5931472255983175,
+      "fitness": 0.5931472255983175
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7888993052554758,
+      "metrics/recall(B)": 0.7720843860738067,
+      "metrics/mAP50(B)": 0.845236327433954,
+      "metrics/mAP50-95(B)": 0.7148785885119692,
+      "fitness": 0.7148785885119692,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 11,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6074509995049343,
+      "metrics/recall(B)": 0.7165018660054614,
+      "metrics/mAP50(B)": 0.7048478421428477,
+      "metrics/mAP50-95(B)": 0.57611240168154,
+      "fitness": 0.57611240168154
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6470598416587523,
+      "metrics/recall(B)": 0.7231335251938202,
+      "metrics/mAP50(B)": 0.7450920223584507,
+      "metrics/mAP50-95(B)": 0.6232865029817899,
+      "fitness": 0.6232865029817899
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8023274970368437,
+      "metrics/recall(B)": 0.7643880840542308,
+      "metrics/mAP50(B)": 0.8639959187501066,
+      "metrics/mAP50-95(B)": 0.736893170992593,
+      "fitness": 0.736893170992593,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 12,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6374932663609283,
+      "metrics/recall(B)": 0.6719331724706261,
+      "metrics/mAP50(B)": 0.6989378569571665,
+      "metrics/mAP50-95(B)": 0.5718836788880878,
+      "fitness": 0.5718836788880878
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6544295429492133,
+      "metrics/recall(B)": 0.7058332369395373,
+      "metrics/mAP50(B)": 0.7263801061954789,
+      "metrics/mAP50-95(B)": 0.5965197573968406,
+      "fitness": 0.5965197573968406
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7782654408377062,
+      "metrics/recall(B)": 0.788719512195122,
+      "metrics/mAP50(B)": 0.8806751801623665,
+      "metrics/mAP50-95(B)": 0.7551916080230986,
+      "fitness": 0.7551916080230986,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 13,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6114308910540633,
+      "metrics/recall(B)": 0.7228644611746514,
+      "metrics/mAP50(B)": 0.7072503222567206,
+      "metrics/mAP50-95(B)": 0.5804859123078965,
+      "fitness": 0.5804859123078965
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6730064774750507,
+      "metrics/recall(B)": 0.7400998728266137,
+      "metrics/mAP50(B)": 0.770777821481613,
+      "metrics/mAP50-95(B)": 0.6484944428128012,
+      "fitness": 0.6484944428128012
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.816852536292769,
+      "metrics/recall(B)": 0.7678189298672953,
+      "metrics/mAP50(B)": 0.8610635219785632,
+      "metrics/mAP50-95(B)": 0.7385250310603348,
+      "fitness": 0.7385250310603348,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 14,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6422745624084256,
+      "metrics/recall(B)": 0.7358119489690567,
+      "metrics/mAP50(B)": 0.7021863609369574,
+      "metrics/mAP50-95(B)": 0.5703109518308365,
+      "fitness": 0.5703109518308365
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6604835607781165,
+      "metrics/recall(B)": 0.7406571623140881,
+      "metrics/mAP50(B)": 0.7454597650820182,
+      "metrics/mAP50-95(B)": 0.6255073247512108,
+      "fitness": 0.6255073247512108
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8011380177039936,
+      "metrics/recall(B)": 0.7972296849042235,
+      "metrics/mAP50(B)": 0.8688514603921835,
+      "metrics/mAP50-95(B)": 0.7561403062207579,
+      "fitness": 0.7561403062207579,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 15,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6354191080419378,
+      "metrics/recall(B)": 0.7335123557595098,
+      "metrics/mAP50(B)": 0.7090168712106193,
+      "metrics/mAP50-95(B)": 0.5805745406033929,
+      "fitness": 0.5805745406033929
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6733362686468259,
+      "metrics/recall(B)": 0.7397182424726361,
+      "metrics/mAP50(B)": 0.7584355768842815,
+      "metrics/mAP50-95(B)": 0.6370645868952955,
+      "fitness": 0.6370645868952955
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8223127259030438,
+      "metrics/recall(B)": 0.7778188265554193,
+      "metrics/mAP50(B)": 0.868640776531915,
+      "metrics/mAP50-95(B)": 0.7540755255911626,
+      "fitness": 0.7540755255911626,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 16,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6536196452847487,
+      "metrics/recall(B)": 0.7028012733660893,
+      "metrics/mAP50(B)": 0.7121541294893394,
+      "metrics/mAP50-95(B)": 0.5813575045809547,
+      "fitness": 0.5813575045809547
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6902284836711681,
+      "metrics/recall(B)": 0.7425705551914502,
+      "metrics/mAP50(B)": 0.7620611391808966,
+      "metrics/mAP50-95(B)": 0.6402743409736753,
+      "fitness": 0.6402743409736753
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7391588069440309,
+      "metrics/recall(B)": 0.8345815847227589,
+      "metrics/mAP50(B)": 0.855505014330871,
+      "metrics/mAP50-95(B)": 0.7338949662037989,
+      "fitness": 0.7338949662037989,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 17,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6281570396709393,
+      "metrics/recall(B)": 0.7069744517213471,
+      "metrics/mAP50(B)": 0.6874133638532824,
+      "metrics/mAP50-95(B)": 0.5634432159483829,
+      "fitness": 0.5634432159483829
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6626807258359975,
+      "metrics/recall(B)": 0.7247083521155328,
+      "metrics/mAP50(B)": 0.7335157996809092,
+      "metrics/mAP50-95(B)": 0.604524967276945,
+      "fitness": 0.604524967276945
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7530835398834522,
+      "metrics/recall(B)": 0.8535082721075367,
+      "metrics/mAP50(B)": 0.8699118855350227,
+      "metrics/mAP50-95(B)": 0.7452256699581328,
+      "fitness": 0.7452256699581328,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 18,
+    "train_metrics": {
+      "metrics/precision(B)": 0.65074896050073,
+      "metrics/recall(B)": 0.7183496239202068,
+      "metrics/mAP50(B)": 0.7227105871340596,
+      "metrics/mAP50-95(B)": 0.5933907643910596,
+      "fitness": 0.5933907643910596
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6812160279672717,
+      "metrics/recall(B)": 0.74911155613659,
+      "metrics/mAP50(B)": 0.755146563597965,
+      "metrics/mAP50-95(B)": 0.6326808784095839,
+      "fitness": 0.6326808784095839
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8130905740522298,
+      "metrics/recall(B)": 0.816180415063932,
+      "metrics/mAP50(B)": 0.8796296613968368,
+      "metrics/mAP50-95(B)": 0.7658040048375591,
+      "fitness": 0.7658040048375591,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 19,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6274493838271044,
+      "metrics/recall(B)": 0.715286853202181,
+      "metrics/mAP50(B)": 0.7005224980793546,
+      "metrics/mAP50-95(B)": 0.5728379981677387,
+      "fitness": 0.5728379981677387
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6929185078564889,
+      "metrics/recall(B)": 0.731136444473009,
+      "metrics/mAP50(B)": 0.7540812169876142,
+      "metrics/mAP50-95(B)": 0.6323333149506193,
+      "fitness": 0.6323333149506193
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.824362727061966,
+      "metrics/recall(B)": 0.744410569105691,
+      "metrics/mAP50(B)": 0.8699043135778346,
+      "metrics/mAP50-95(B)": 0.7428275752787067,
+      "fitness": 0.7428275752787067,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 20,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6627908161880133,
+      "metrics/recall(B)": 0.6926830178001699,
+      "metrics/mAP50(B)": 0.7130336338728811,
+      "metrics/mAP50-95(B)": 0.5849575788067136,
+      "fitness": 0.5849575788067136
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.666985147796183,
+      "metrics/recall(B)": 0.7269559147609979,
+      "metrics/mAP50(B)": 0.7382612411829946,
+      "metrics/mAP50-95(B)": 0.6048439309887639,
+      "fitness": 0.6048439309887639
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7491407544339908,
+      "metrics/recall(B)": 0.8642682137157716,
+      "metrics/mAP50(B)": 0.8855925657046411,
+      "metrics/mAP50-95(B)": 0.7631981739861428,
+      "fitness": 0.7631981739861428,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 21,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6665838244884941,
+      "metrics/recall(B)": 0.7024289366702648,
+      "metrics/mAP50(B)": 0.7058233761447403,
+      "metrics/mAP50-95(B)": 0.5702736355928808,
+      "fitness": 0.5702736355928808
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6842969249352513,
+      "metrics/recall(B)": 0.7462238578532736,
+      "metrics/mAP50(B)": 0.7692901389995248,
+      "metrics/mAP50-95(B)": 0.6403266028845398,
+      "fitness": 0.6403266028845398
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7017742437516294,
+      "metrics/recall(B)": 0.92019309580656,
+      "metrics/mAP50(B)": 0.87642072370541,
+      "metrics/mAP50-95(B)": 0.7544653107183515,
+      "fitness": 0.7544653107183515,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 22,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6574938036394797,
+      "metrics/recall(B)": 0.7031752395694075,
+      "metrics/mAP50(B)": 0.7188896452075713,
+      "metrics/mAP50-95(B)": 0.5938432379566826,
+      "fitness": 0.5938432379566826
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6689944271868534,
+      "metrics/recall(B)": 0.7209015817968013,
+      "metrics/mAP50(B)": 0.7306247837780994,
+      "metrics/mAP50-95(B)": 0.6029259036144823,
+      "fitness": 0.6029259036144823
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7551506078164458,
+      "metrics/recall(B)": 0.7969806010596876,
+      "metrics/mAP50(B)": 0.8615178850483759,
+      "metrics/mAP50-95(B)": 0.72730309108025,
+      "fitness": 0.72730309108025,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 23,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6221254026649111,
+      "metrics/recall(B)": 0.7156446979875241,
+      "metrics/mAP50(B)": 0.6935606806733502,
+      "metrics/mAP50-95(B)": 0.5710086778147251,
+      "fitness": 0.5710086778147251
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6750992293035656,
+      "metrics/recall(B)": 0.7089521268497543,
+      "metrics/mAP50(B)": 0.7211764013833446,
+      "metrics/mAP50-95(B)": 0.6031631977524439,
+      "fitness": 0.6031631977524439
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8443602676930946,
+      "metrics/recall(B)": 0.7530744620712155,
+      "metrics/mAP50(B)": 0.8600339067357792,
+      "metrics/mAP50-95(B)": 0.7327659721418132,
+      "fitness": 0.7327659721418132,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 24,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6349432940953785,
+      "metrics/recall(B)": 0.7186832836429669,
+      "metrics/mAP50(B)": 0.7013932635280926,
+      "metrics/mAP50-95(B)": 0.5759109851997847,
+      "fitness": 0.5759109851997847
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6518561064653161,
+      "metrics/recall(B)": 0.7164307052924155,
+      "metrics/mAP50(B)": 0.7138989056516571,
+      "metrics/mAP50-95(B)": 0.5875358592256508,
+      "fitness": 0.5875358592256508
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7602353505291239,
+      "metrics/recall(B)": 0.7748983739837398,
+      "metrics/mAP50(B)": 0.8346711041440575,
+      "metrics/mAP50-95(B)": 0.7128842744858421,
+      "fitness": 0.7128842744858421,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 25,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6359783176180709,
+      "metrics/recall(B)": 0.7145098690227547,
+      "metrics/mAP50(B)": 0.7117139393289494,
+      "metrics/mAP50-95(B)": 0.5794022351287016,
+      "fitness": 0.5794022351287016
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6770762883704442,
+      "metrics/recall(B)": 0.6641787438107235,
+      "metrics/mAP50(B)": 0.6901652054584113,
+      "metrics/mAP50-95(B)": 0.5614152946900955,
+      "fitness": 0.5614152946900955
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7984913621941768,
+      "metrics/recall(B)": 0.7870934959349594,
+      "metrics/mAP50(B)": 0.8402843337635528,
+      "metrics/mAP50-95(B)": 0.7045722887194504,
+      "fitness": 0.7045722887194504,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 26,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6376819707412894,
+      "metrics/recall(B)": 0.6975695855020744,
+      "metrics/mAP50(B)": 0.6927323069155489,
+      "metrics/mAP50-95(B)": 0.5714262683071428,
+      "fitness": 0.5714262683071428
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.660712102012406,
+      "metrics/recall(B)": 0.732103553497994,
+      "metrics/mAP50(B)": 0.7527607633656657,
+      "metrics/mAP50-95(B)": 0.6304452237861218,
+      "fitness": 0.6304452237861218
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7457029262465741,
+      "metrics/recall(B)": 0.8280561379255496,
+      "metrics/mAP50(B)": 0.8534166343383198,
+      "metrics/mAP50-95(B)": 0.7280882818721828,
+      "fitness": 0.7280882818721828,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 27,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6261281361629649,
+      "metrics/recall(B)": 0.7053544683506583,
+      "metrics/mAP50(B)": 0.6965601536792216,
+      "metrics/mAP50-95(B)": 0.5686722060394709,
+      "fitness": 0.5686722060394709
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6664142624839169,
+      "metrics/recall(B)": 0.748122551256114,
+      "metrics/mAP50(B)": 0.7403447390041795,
+      "metrics/mAP50-95(B)": 0.6236003451198572,
+      "fitness": 0.6236003451198572
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.720006673232811,
+      "metrics/recall(B)": 0.8200481649469026,
+      "metrics/mAP50(B)": 0.8402138491764379,
+      "metrics/mAP50-95(B)": 0.7228779045216042,
+      "fitness": 0.7228779045216042,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 28,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6826598178239718,
+      "metrics/recall(B)": 0.7024559286937283,
+      "metrics/mAP50(B)": 0.7183023706832361,
+      "metrics/mAP50-95(B)": 0.5895967611427995,
+      "fitness": 0.5895967611427995
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.674661780077951,
+      "metrics/recall(B)": 0.7472788990066144,
+      "metrics/mAP50(B)": 0.7419140132632737,
+      "metrics/mAP50-95(B)": 0.6252398953343336,
+      "fitness": 0.6252398953343336
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.77143348322334,
+      "metrics/recall(B)": 0.7770864843721217,
+      "metrics/mAP50(B)": 0.8347540109842643,
+      "metrics/mAP50-95(B)": 0.7108495621486182,
+      "fitness": 0.7108495621486182,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 29,
+    "train_metrics": {
+      "metrics/precision(B)": 0.627673055280481,
+      "metrics/recall(B)": 0.701109817616706,
+      "metrics/mAP50(B)": 0.6803236643077502,
+      "metrics/mAP50-95(B)": 0.5620066744175123,
+      "fitness": 0.5620066744175123
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6646230858132253,
+      "metrics/recall(B)": 0.7282762856613518,
+      "metrics/mAP50(B)": 0.7138338423022006,
+      "metrics/mAP50-95(B)": 0.6018947076149586,
+      "fitness": 0.6018947076149586
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8106210124435564,
+      "metrics/recall(B)": 0.75512165884759,
+      "metrics/mAP50(B)": 0.8440665111001032,
+      "metrics/mAP50-95(B)": 0.7206272693512259,
+      "fitness": 0.7206272693512259,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 30,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6766885280751213,
+      "metrics/recall(B)": 0.6837116268477479,
+      "metrics/mAP50(B)": 0.695411913618431,
+      "metrics/mAP50-95(B)": 0.5716219597710297,
+      "fitness": 0.5716219597710297
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6761801240949461,
+      "metrics/recall(B)": 0.7563429963223904,
+      "metrics/mAP50(B)": 0.7427226247532881,
+      "metrics/mAP50-95(B)": 0.6302343200718201,
+      "fitness": 0.6302343200718201
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7876508843258139,
+      "metrics/recall(B)": 0.7304901369063315,
+      "metrics/mAP50(B)": 0.8368629337003116,
+      "metrics/mAP50-95(B)": 0.7033853250170367,
+      "fitness": 0.7033853250170367,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 31,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6778897931864,
+      "metrics/recall(B)": 0.6800696520980739,
+      "metrics/mAP50(B)": 0.7135397394098576,
+      "metrics/mAP50-95(B)": 0.5862020834393795,
+      "fitness": 0.5862020834393795
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6769125662832728,
+      "metrics/recall(B)": 0.7115207146385834,
+      "metrics/mAP50(B)": 0.7245951450581549,
+      "metrics/mAP50-95(B)": 0.5980390504172854,
+      "fitness": 0.5980390504172854
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8013169440068237,
+      "metrics/recall(B)": 0.7645264235417811,
+      "metrics/mAP50(B)": 0.8259603510060907,
+      "metrics/mAP50-95(B)": 0.7018542707820745,
+      "fitness": 0.7018542707820745,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 32,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6780170461216404,
+      "metrics/recall(B)": 0.6812368038270386,
+      "metrics/mAP50(B)": 0.7027088906960299,
+      "metrics/mAP50-95(B)": 0.5746368958615122,
+      "fitness": 0.5746368958615122
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.691747470987563,
+      "metrics/recall(B)": 0.7498033197226024,
+      "metrics/mAP50(B)": 0.7449038333392122,
+      "metrics/mAP50-95(B)": 0.6236124337452826,
+      "fitness": 0.6236124337452826
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8063036975473274,
+      "metrics/recall(B)": 0.7204727408959053,
+      "metrics/mAP50(B)": 0.8125342071783636,
+      "metrics/mAP50-95(B)": 0.6896544437582107,
+      "fitness": 0.6896544437582107,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 33,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6558851603727835,
+      "metrics/recall(B)": 0.6811611203816281,
+      "metrics/mAP50(B)": 0.6959488214744148,
+      "metrics/mAP50-95(B)": 0.5722422130715458,
+      "fitness": 0.5722422130715458
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.649463852387348,
+      "metrics/recall(B)": 0.7368658429460161,
+      "metrics/mAP50(B)": 0.7185955425348071,
+      "metrics/mAP50-95(B)": 0.5943519647826085,
+      "fitness": 0.5943519647826085
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7832002156042037,
+      "metrics/recall(B)": 0.7571231413713451,
+      "metrics/mAP50(B)": 0.8250741800627209,
+      "metrics/mAP50-95(B)": 0.69622326157221,
+      "fitness": 0.69622326157221,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 34,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6738843741189207,
+      "metrics/recall(B)": 0.6995611841144843,
+      "metrics/mAP50(B)": 0.7080366361477358,
+      "metrics/mAP50-95(B)": 0.5813925604101541,
+      "fitness": 0.5813925604101541
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.7033473928446194,
+      "metrics/recall(B)": 0.7541149786733607,
+      "metrics/mAP50(B)": 0.7440975710517386,
+      "metrics/mAP50-95(B)": 0.6248173436466682,
+      "fitness": 0.6248173436466682
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.8008088654282665,
+      "metrics/recall(B)": 0.7658397001516017,
+      "metrics/mAP50(B)": 0.8299641375277226,
+      "metrics/mAP50-95(B)": 0.7208767231274942,
+      "fitness": 0.7208767231274942,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 35,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6985053642364383,
+      "metrics/recall(B)": 0.6844123451039694,
+      "metrics/mAP50(B)": 0.7104723141493492,
+      "metrics/mAP50-95(B)": 0.5849836150459518,
+      "fitness": 0.5849836150459518
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.7048857526415447,
+      "metrics/recall(B)": 0.6876583471868936,
+      "metrics/mAP50(B)": 0.7119200677764972,
+      "metrics/mAP50-95(B)": 0.6032412020433845,
+      "fitness": 0.6032412020433845
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7284429380255353,
+      "metrics/recall(B)": 0.7979610098243001,
+      "metrics/mAP50(B)": 0.8230588256310413,
+      "metrics/mAP50-95(B)": 0.6970043292953689,
+      "fitness": 0.6970043292953689,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 36,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6830414759059391,
+      "metrics/recall(B)": 0.6937441015558479,
+      "metrics/mAP50(B)": 0.7143118512708246,
+      "metrics/mAP50-95(B)": 0.5899838922652829,
+      "fitness": 0.5899838922652829
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6769502783152986,
+      "metrics/recall(B)": 0.6937682826937397,
+      "metrics/mAP50(B)": 0.7120484123634911,
+      "metrics/mAP50-95(B)": 0.588768999002609,
+      "fitness": 0.588768999002609
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7547822166241942,
+      "metrics/recall(B)": 0.7578252032520325,
+      "metrics/mAP50(B)": 0.8053637032182972,
+      "metrics/mAP50-95(B)": 0.6847334940949512,
+      "fitness": 0.6847334940949512,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 37,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6737218779591472,
+      "metrics/recall(B)": 0.6863741989271407,
+      "metrics/mAP50(B)": 0.7113707128173006,
+      "metrics/mAP50-95(B)": 0.5902380359902151,
+      "fitness": 0.5902380359902151
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6373509332713975,
+      "metrics/recall(B)": 0.7297017215239072,
+      "metrics/mAP50(B)": 0.7092134689726416,
+      "metrics/mAP50-95(B)": 0.5853276034457724,
+      "fitness": 0.5853276034457724
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7665736204387077,
+      "metrics/recall(B)": 0.7588414634146341,
+      "metrics/mAP50(B)": 0.8019005819334268,
+      "metrics/mAP50-95(B)": 0.6808483406971426,
+      "fitness": 0.6808483406971426,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 38,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6665505093890767,
+      "metrics/recall(B)": 0.6766653535399831,
+      "metrics/mAP50(B)": 0.7073639322517702,
+      "metrics/mAP50-95(B)": 0.580947270202668,
+      "fitness": 0.580947270202668
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6677008719100614,
+      "metrics/recall(B)": 0.7523603553555975,
+      "metrics/mAP50(B)": 0.743185994648548,
+      "metrics/mAP50-95(B)": 0.6207951826271001,
+      "fitness": 0.6207951826271001
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7435469538641637,
+      "metrics/recall(B)": 0.7755081300813008,
+      "metrics/mAP50(B)": 0.8108333071148116,
+      "metrics/mAP50-95(B)": 0.6692639138673193,
+      "fitness": 0.6692639138673193,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 39,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6290588866346858,
+      "metrics/recall(B)": 0.7118931146672136,
+      "metrics/mAP50(B)": 0.6848784222287423,
+      "metrics/mAP50-95(B)": 0.5594159480002894,
+      "fitness": 0.5594159480002894
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6672935853727185,
+      "metrics/recall(B)": 0.7513892023630812,
+      "metrics/mAP50(B)": 0.7510735085849213,
+      "metrics/mAP50-95(B)": 0.6286805098999365,
+      "fitness": 0.6286805098999365
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7770311332320461,
+      "metrics/recall(B)": 0.8464267220638846,
+      "metrics/mAP50(B)": 0.8486231164912265,
+      "metrics/mAP50-95(B)": 0.7406483162426643,
+      "fitness": 0.7406483162426643,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 40,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6501281857733202,
+      "metrics/recall(B)": 0.6978229327830299,
+      "metrics/mAP50(B)": 0.6911688592003815,
+      "metrics/mAP50-95(B)": 0.5670055986763178,
+      "fitness": 0.5670055986763178
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6797039601634127,
+      "metrics/recall(B)": 0.729573570458086,
+      "metrics/mAP50(B)": 0.7331118937647276,
+      "metrics/mAP50-95(B)": 0.6161643402791304,
+      "fitness": 0.6161643402791304
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7399240868501697,
+      "metrics/recall(B)": 0.8229674796747968,
+      "metrics/mAP50(B)": 0.8419032766240346,
+      "metrics/mAP50-95(B)": 0.7129057117176976,
+      "fitness": 0.7129057117176976,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 41,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6752744195935498,
+      "metrics/recall(B)": 0.7163385447542923,
+      "metrics/mAP50(B)": 0.7143970822617897,
+      "metrics/mAP50-95(B)": 0.5886077609478506,
+      "fitness": 0.5886077609478506
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6767041499144488,
+      "metrics/recall(B)": 0.7207514080375818,
+      "metrics/mAP50(B)": 0.736288481041695,
+      "metrics/mAP50-95(B)": 0.6256347006877874,
+      "fitness": 0.6256347006877874
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7397809779198687,
+      "metrics/recall(B)": 0.802439024390244,
+      "metrics/mAP50(B)": 0.8367984516719608,
+      "metrics/mAP50-95(B)": 0.7146419030078065,
+      "fitness": 0.7146419030078065,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 42,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6846342946546986,
+      "metrics/recall(B)": 0.6938551297828156,
+      "metrics/mAP50(B)": 0.7117634058213868,
+      "metrics/mAP50-95(B)": 0.5878018644970088,
+      "fitness": 0.5878018644970088
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6535658068415187,
+      "metrics/recall(B)": 0.7247139506362217,
+      "metrics/mAP50(B)": 0.7169804937525264,
+      "metrics/mAP50-95(B)": 0.6067699455186748,
+      "fitness": 0.6067699455186748
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.777536399346124,
+      "metrics/recall(B)": 0.7252032520325202,
+      "metrics/mAP50(B)": 0.8128685319833311,
+      "metrics/mAP50-95(B)": 0.6929103636282892,
+      "fitness": 0.6929103636282892,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 43,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6798490277780249,
+      "metrics/recall(B)": 0.7097920841546519,
+      "metrics/mAP50(B)": 0.7142053249018199,
+      "metrics/mAP50-95(B)": 0.591687710849677,
+      "fitness": 0.591687710849677
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6912300158672822,
+      "metrics/recall(B)": 0.6910421662468538,
+      "metrics/mAP50(B)": 0.7221628059442067,
+      "metrics/mAP50-95(B)": 0.5961466004878426,
+      "fitness": 0.5961466004878426
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7760113698183615,
+      "metrics/recall(B)": 0.7313655614562722,
+      "metrics/mAP50(B)": 0.8125418844603697,
+      "metrics/mAP50-95(B)": 0.6855932608164068,
+      "fitness": 0.6855932608164068,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 44,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6963511482715463,
+      "metrics/recall(B)": 0.6917539798970116,
+      "metrics/mAP50(B)": 0.7112790183647342,
+      "metrics/mAP50-95(B)": 0.5823384864702434,
+      "fitness": 0.5823384864702434
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.7156961049603308,
+      "metrics/recall(B)": 0.70955249626709,
+      "metrics/mAP50(B)": 0.723694160287178,
+      "metrics/mAP50-95(B)": 0.6042196148488004,
+      "fitness": 0.6042196148488004
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7509819447056014,
+      "metrics/recall(B)": 0.7685242864186872,
+      "metrics/mAP50(B)": 0.8149526154407511,
+      "metrics/mAP50-95(B)": 0.67611588375956,
+      "fitness": 0.67611588375956,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 45,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6753601299469614,
+      "metrics/recall(B)": 0.7130822144651754,
+      "metrics/mAP50(B)": 0.7182502170406118,
+      "metrics/mAP50-95(B)": 0.5905702129673873,
+      "fitness": 0.5905702129673873
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6644732879657801,
+      "metrics/recall(B)": 0.7450687039696735,
+      "metrics/mAP50(B)": 0.7320682909090782,
+      "metrics/mAP50-95(B)": 0.6138482171585687,
+      "fitness": 0.6138482171585687
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7558980232142684,
+      "metrics/recall(B)": 0.7863821138211382,
+      "metrics/mAP50(B)": 0.8142141020989832,
+      "metrics/mAP50-95(B)": 0.6766184857257969,
+      "fitness": 0.6766184857257969,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 46,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6640943866222596,
+      "metrics/recall(B)": 0.7350468325683356,
+      "metrics/mAP50(B)": 0.7199977774120223,
+      "metrics/mAP50-95(B)": 0.588811471249962,
+      "fitness": 0.588811471249962
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6719687117687818,
+      "metrics/recall(B)": 0.747346355396621,
+      "metrics/mAP50(B)": 0.7358517006592198,
+      "metrics/mAP50-95(B)": 0.612786835719864,
+      "fitness": 0.612786835719864
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.736939448249919,
+      "metrics/recall(B)": 0.797670127816084,
+      "metrics/mAP50(B)": 0.8267634436183271,
+      "metrics/mAP50-95(B)": 0.6897021373369017,
+      "fitness": 0.6897021373369017,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 47,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6867244404748292,
+      "metrics/recall(B)": 0.7141280856644453,
+      "metrics/mAP50(B)": 0.7244245572756095,
+      "metrics/mAP50-95(B)": 0.5980321099219437,
+      "fitness": 0.5980321099219437
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6919803314948352,
+      "metrics/recall(B)": 0.6838898516040947,
+      "metrics/mAP50(B)": 0.7216684344135368,
+      "metrics/mAP50-95(B)": 0.5911647535566721,
+      "fitness": 0.5911647535566721
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7627513844099915,
+      "metrics/recall(B)": 0.7778411805834933,
+      "metrics/mAP50(B)": 0.8206062570708069,
+      "metrics/mAP50-95(B)": 0.6903135127563929,
+      "fitness": 0.6903135127563929,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 48,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6786442440542131,
+      "metrics/recall(B)": 0.7061522166024973,
+      "metrics/mAP50(B)": 0.7184287673576004,
+      "metrics/mAP50-95(B)": 0.5966396783398078,
+      "fitness": 0.5966396783398078
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.7080697434041883,
+      "metrics/recall(B)": 0.6656341660855665,
+      "metrics/mAP50(B)": 0.7239099716817832,
+      "metrics/mAP50-95(B)": 0.5995071826932217,
+      "fitness": 0.5995071826932217
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.720900332463422,
+      "metrics/recall(B)": 0.49186505421348636,
+      "metrics/mAP50(B)": 0.5693822092856989,
+      "metrics/mAP50-95(B)": 0.4957059336838355,
+      "fitness": 0.4957059336838355,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 49,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6833192379543784,
+      "metrics/recall(B)": 0.701386357185046,
+      "metrics/mAP50(B)": 0.7108317680691656,
+      "metrics/mAP50-95(B)": 0.5877058177564276,
+      "fitness": 0.5877058177564276
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6751311672011022,
+      "metrics/recall(B)": 0.7045449352501449,
+      "metrics/mAP50(B)": 0.7144661846877282,
+      "metrics/mAP50-95(B)": 0.5920276654155494,
+      "fitness": 0.5920276654155494
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7727212732803073,
+      "metrics/recall(B)": 0.7664718519220735,
+      "metrics/mAP50(B)": 0.8194525464195768,
+      "metrics/mAP50-95(B)": 0.7058382460704895,
+      "fitness": 0.7058382460704895,
+      "num-examples": 34
+    }
+  },
+  {
+    "round": 50,
+    "train_metrics": {
+      "metrics/precision(B)": 0.6526690766218924,
+      "metrics/recall(B)": 0.7235270983426654,
+      "metrics/mAP50(B)": 0.7133249743042949,
+      "metrics/mAP50-95(B)": 0.5781865272508581,
+      "fitness": 0.5781865272508581
+    },
+    "evaluate_metrics_clientapp": {
+      "metrics/precision(B)": 0.6927177457273279,
+      "metrics/recall(B)": 0.7087197046009588,
+      "metrics/mAP50(B)": 0.7174391661047957,
+      "metrics/mAP50-95(B)": 0.583120901706019,
+      "fitness": 0.583120901706019
+    },
+    "evaluate_metrics_serverapp": {
+      "metrics/precision(B)": 0.7722658669076594,
+      "metrics/recall(B)": 0.7858410520827722,
+      "metrics/mAP50(B)": 0.8267269012120542,
+      "metrics/mAP50-95(B)": 0.697209712872891,
+      "fitness": 0.697209712872891,
+      "num-examples": 34
+    }
+  }
+]
