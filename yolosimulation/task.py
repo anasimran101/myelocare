@@ -9,6 +9,7 @@ from pathlib import Path
 from flwr.common.typing import UserConfig
 
 
+
 # ===== FUNCTIONS =====
 
 def get_model():
@@ -89,6 +90,71 @@ def test(model,data_path, project = "runs", name = "train", device=DEVICE):
     metrics["num-examples"] = num_samples
     print("num samples in client validation: ", num_samples)
     return metrics
+
+
+
+
+from collections import OrderedDict
+from typing import Tuple
+
+#[CHANGE] If architecture changes, update these layer ranges accordingly
+# Define which layers belong to backbone, neck, head based on YOLOv8 architecture
+#TODO: move to config or a helper module
+
+BACKBONE_LAYERS = range(0, 9)   # model.0 – model.8
+NECK_LAYERS     = range(9, 23)  # model.9 – model.22
+HEAD_LAYER      = 23            # model.23
+
+
+
+def get_section_weights(state_dict: OrderedDict) -> Tuple[set, set, set]:
+    """Return three sets of keys: backbone, neck, head."""
+    backbone_keys = {k for k in state_dict if not k.startswith(
+        tuple(f'model.{i}.' for i in range(9, 24)))}
+    neck_keys = {k for k in state_dict if k.startswith(
+        tuple(f'model.{i}.' for i in range(9, 23)))}
+    head_keys = {k for k in state_dict if k.startswith('model.23.')}
+    return backbone_keys, neck_keys, head_keys
+
+# Which sections each strategy touches
+#TODO: move to config or helper module
+STRATEGY_REGISTRY = {
+    #  name                  backbone  neck   head
+    'FedAvg':               (True,  True,  True),
+    'FedBackboneAvg':       (True,  False, False),
+    'FedNeckAvg':           (False, True,  False),
+    'FedHeadAvg':           (False, False, True),
+    'FedNeckHeadAvg':       (False, True,  True),
+    'FedBackboneHeadAvg':   (True,  False, True),
+    'FedBackboneNeckAvg':   (True,  True,  False),
+    'FedMedian':            (True,  True,  True),
+    'FedBackboneMedian':    (True,  False, False),
+    'FedNeckMedian':        (False, True,  False),
+    'FedHeadMedian':        (False, False, True),
+    'FedNeckHeadMedian':    (False, True,  True),
+    'FedBackboneHeadMedian':(True,  False, True),
+    'FedBackboneNeckMedian':(True,  True,  False),
+}
+
+def get_relevant_keys(state_dict: OrderedDict, strategy_name: str) -> list:
+    """Sorted list of state_dict keys that this strategy aggregates."""
+    use_backbone, use_neck, use_head = STRATEGY_REGISTRY[strategy_name]
+    backbone_keys, neck_keys, head_keys = get_section_weights(state_dict)
+    return sorted(
+        k for k in state_dict
+        if (use_backbone and k in backbone_keys)
+        or (use_neck     and k in neck_keys)
+        or (use_head     and k in head_keys)
+    )
+
+
+
+
+
+
+
+
+# helper functions for run dirs
 
 
 def make_project_name(train_or_val: str, client_or_server: str, round_num: int):

@@ -38,6 +38,11 @@ python3 -m venv myelocare_env
 source myelocare_env/bin/activate
 
 # Install PyTorch with CUDA support (no Linux driver needed)
+
+# gtx 1080
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+
+#rtx 4000
 pip install torch torchvision
 
 # Install Ultralytics (YOLO)
@@ -51,4 +56,5 @@ sudo install lazygit /usr/local/bin
 rm -f lazygit lazygit.tar.gz
 
 # Test PyTorch and Ultralytics
-python3 -c "import torch; import ultralytics; print('CUDA available:', torch.cuda.is_available()); print('Ultralytics version:', ultralytics.__version__)"
+python3 -c "import torch, ultralytics; print(torch.__config__.show()); print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else None); print('Ultralytics:', ultralytics.__version__)"
+python3 -c "import torch; print(torch.cuda.get_device_capability()); print(torch.backends.cudnn.enabled); x=torch.randn(4096,4096, device='cuda'); print(x.device)"

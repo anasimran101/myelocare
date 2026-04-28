@@ -3,7 +3,7 @@ from flwr.app import ArrayRecord, ConfigRecord, Context, MetricRecord
 from flwr.serverapp import Grid, ServerApp
 from yolosimulation.strategy import CustomFedProx, CustomFedAvg, STRATEGY_REGISTRY, load_strategy
 
-from yolosimulation.task import get_model, test, create_run_dir, make_project_name
+from yolosimulation.task import get_model, test, create_run_dir, make_project_name,get_relevant_keys 
 from yolosimulation.data_partition import create_partitions
 from yolosimulation.config import *
 
@@ -58,8 +58,14 @@ def main(grid: Grid, context: Context) -> None:
     num_clients = context.run_config.get("num-clients", NUM_CLIENTS)
     strategy_name = context.run_config.get("strategy", STRATEGY_NAME)
 
+
     if(partitioner != "none"):
         create_partitions(MAIN_DATASET_PATH, DATASET_PATH,NUM_CLIENTS, CLASSES, [ 1/num_clients for i in range(0, num_clients) ], val_ratio=fraction_evaluate)
+
+
+    #wrapper fir global evaluation
+    def _evaluate(server_round, arrays):
+        return global_evaluate(server_round, arrays, strategy_name)
 
     # Load initial YOLOv8 model
     global_model = get_model()
@@ -85,24 +91,40 @@ def main(grid: Grid, context: Context) -> None:
             "dataset-base": DATASET_PATH
         }),
         num_rounds=num_rounds,
-        evaluate_fn=global_evaluate,
+        evaluate_fn=_evaluate,
     )
 
     # Save model
-    state_dict = result.arrays.to_torch_state_dict()
-    torch.save(state_dict, "final_model.pt")
-
-
-def global_evaluate(server_round: int, arrays: ArrayRecord) -> MetricRecord:
-
     model = get_model()
+    full_sd    = model.model.state_dict()
+    partial_sd = result.arrays.to_torch_state_dict()
 
-    model.model.load_state_dict(arrays.to_torch_state_dict())
+    relevant = set(get_relevant_keys(full_sd, strategy_name))
+    if set(partial_sd.keys()) == relevant:
+        final_sd = {**full_sd, **partial_sd}
+    else:
+        final_sd = partial_sd                       # already full
+
+    torch.save(final_sd, "final_model.pt")
+
+
+def global_evaluate(server_round: int, arrays: ArrayRecord, strategy_name: str = "FedAvg") -> MetricRecord:
+    model = get_model()
+    full_sd   = model.model.state_dict()
+    partial_sd = arrays.to_torch_state_dict()
+
+    # Merge partial weights into the full model if needed
+    relevant = set(get_relevant_keys(full_sd, strategy_name))
+    if set(partial_sd.keys()) == relevant:          # partial — merge
+        merged = {**full_sd, **partial_sd}
+        model.model.load_state_dict(merged, strict=True)
+    else:                                           # full (round 1 or FedAvg)
+        model.model.load_state_dict(partial_sd, strict=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.model.to(device)
-
-
-    project, name = make_project_name("val", f"server", server_round)
-    metrics = test(model, project=project, name=name, data_path=VAL_YAML_FILE, device=device)
+    project, name = make_project_name("val", "server", server_round)
+    metrics = test(model, project=project, name=name,
+                   data_path=VAL_YAML_FILE, device=device)
     return MetricRecord(metrics)
+

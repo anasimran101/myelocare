@@ -11,6 +11,7 @@ import time
 from logging import INFO
 from pathlib import Path
 from typing import Callable, Optional, Iterable
+from yolosimulation.task import get_model, get_relevant_keys, get_model
 
 import wandb
 from flwr.app import ArrayRecord, ConfigRecord, Message, MetricRecord
@@ -19,8 +20,7 @@ from flwr.serverapp import Grid
 from flwr.serverapp.strategy import Result
 from flwr.serverapp.strategy.strategy_utils import log_strategy_start_info
 
-from flwr.serverapp.strategy import FedAvg, FedProx
-from yolosimulation.task import get_model
+from flwr.serverapp.strategy import FedAvg, FedProx, FedMedian
 
 PROJECT_NAME = "FLOWER-YOLO-SIMU"
 
@@ -36,18 +36,28 @@ class CustomStrategyBase:
         self.save_path = path
         self.run_dir = run_dir
 
-    def _update_best_acc(self, current_round: int, accuracy: float, arrays: ArrayRecord):
-        if accuracy > self.best_acc_so_far:
-            self.best_acc_so_far = accuracy
-            logger.log(INFO, "New best global model found: %f", accuracy)
+    def _update_best_acc(self, current_round: int, accuracy: float,
+                     arrays: ArrayRecord, strategy_name: str):
+        if accuracy <= self.best_acc_so_far:
+            return
+        self.best_acc_so_far = accuracy
+        logger.log(INFO, "New best global model found: %f", accuracy)
 
-            model = get_model()
-            model.model.load_state_dict(arrays.to_torch_state_dict())
+        # arrays may be a partial state dict — merge into a fresh full model
+        model = get_model()
+        full_sd = model.model.state_dict()
+        partial_sd = arrays.to_torch_state_dict()
 
-            model_path = self.save_path / f"best_{accuracy:.4f}_round_{current_round}.pt"
-            model.save(model_path)
+        relevant = set(get_relevant_keys(full_sd, strategy_name))
+        if relevant == set(partial_sd.keys()):          # partial arrays
+            merged = {**full_sd, **partial_sd}
+            model.model.load_state_dict(merged, strict=True)
+        else:                                            # already full
+            model.model.load_state_dict(partial_sd, strict=True)
 
-            logger.log(INFO, "Saved best model: %s", model_path)
+        model_path = self.save_path / f"best_{accuracy:.4f}_round_{current_round}.pt"
+        model.save(model_path)
+        logger.log(INFO, "Saved best model: %s", model_path)
 
     def save_metrics_as_json(self, current_round: int, result: Result):
         path = self.save_path / "results.json"
@@ -76,18 +86,10 @@ class CustomStrategyBase:
 
     # ---------------------------
     # Shared training loop
-    def _common_start(
-        self,
-        grid: Grid,
-        initial_arrays: ArrayRecord,
-        num_rounds: int = 3,
-        timeout: float = 3600,
-        train_config: Optional[ConfigRecord] = None,
-        evaluate_config: Optional[ConfigRecord] = None,
-        evaluate_fn: Optional[
-            Callable[[int, ArrayRecord], Optional[MetricRecord]]
-        ] = None,
-    ) -> Result:
+    def _common_start(self, grid, initial_arrays, num_rounds=3, timeout=3600,
+                    train_config=None, evaluate_config=None, evaluate_fn=None,
+                    strategy_name: str = "FedAvg") -> Result:
+    
 
         wandb.init(project=PROJECT_NAME, name=f"{self.run_dir}-ServerApp")
 
@@ -151,10 +153,10 @@ class CustomStrategyBase:
                 if res:
                     result.evaluate_metrics_serverapp[current_round] = res
                     self._update_best_acc(
-                        current_round,
-                        res["metrics/mAP50-95(B)"],
-                        arrays,
-                    )
+                        current_round, 
+                        res["metrics/mAP50-95(B)"], 
+                        arrays, 
+                        strategy_name)
 
                     wandb.log(dict(res), step=current_round)
 
@@ -165,6 +167,8 @@ class CustomStrategyBase:
         return result
 
 
+
+
 class CustomFedAvg(CustomStrategyBase, FedAvg):
     def start(self, *args, **kwargs):
         return self._common_start(*args, **kwargs)
@@ -173,12 +177,31 @@ class CustomFedAvg(CustomStrategyBase, FedAvg):
 class CustomFedProx(CustomStrategyBase, FedProx):
     def start(self, *args, **kwargs):
         return self._common_start(*args, **kwargs)
-    
+
+class CustomFedMedian(CustomStrategyBase, FedMedian):
+    def start(self, *args, **kwargs):
+        return self._common_start(*args, **kwargs)
+
+
 
 STRATEGY_REGISTRY = {
-    "FedAvg": CustomFedAvg,
-    "FedProx": CustomFedProx
+    'FedAvg':               CustomFedAvg,
+    'FedProx':              CustomFedProx,
+    'FedBackboneAvg':       CustomFedAvg,
+    'FedNeckAvg':           CustomFedAvg,
+    'FedHeadAvg':           CustomFedAvg,
+    'FedNeckHeadAvg':       CustomFedAvg,
+    'FedBackboneHeadAvg':   CustomFedAvg,
+    'FedBackboneNeckAvg':   CustomFedAvg,
+    'FedMedian':            CustomFedMedian,
+    'FedBackboneMedian':    CustomFedMedian,
+    'FedNeckMedian':        CustomFedMedian,
+    'FedHeadMedian':        CustomFedMedian,
+    'FedNeckHeadMedian':    CustomFedMedian,
+    'FedBackboneHeadMedian':CustomFedMedian,
+    'FedBackboneNeckMedian':CustomFedMedian,
 }
+
 
 def load_strategy(strategy_name: str, **kwargs):
     try:

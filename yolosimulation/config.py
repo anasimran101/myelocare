@@ -19,7 +19,7 @@ DATA_PATH = str(BASE_PATH /             "datasets/merged_data")
 # ===== OTHER CONFIG =====
 NUM_CLIENTS = 3
 BATCH_SIZE = 1
-PARTITIONER = "none"
+PARTITIONER = "none" # "non-iid", "iid", "none"
 CLASSES = ["plasma", "non_plasma"]
 LOCAL_EPOCHS = 1  # default local epochs for federated round
 
