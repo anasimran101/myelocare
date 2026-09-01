@@ -5,7 +5,6 @@
 - [ ] Verify Merge of layers on central server
 - [ ] Fix sharing of attributes
 - [ ] Fix default model loading
-- [ ] Move dataset generation to nodes (A-E)
 - [ ] Verify test/val dataset partition
 
 ## Ehtisham (E)
@@ -26,14 +25,16 @@
   - Keep scripts separate, maybe in `scripts/plot` folder
   - Use in above task or wherever you see fit
 
-- [ ] Move dataset generation to nodes (A-E)
+- [ ] Move dataset generation to nodes 
   - Synthetic dataset generation should be on each node
-  - After everything else is completed
+  - [Client APP doc 1.25.0](https://flower.ai/docs/framework/1.25/en/ref-api/flwr.clientapp.ClientApp.html): There is a lifespan decorator that registers a funtion which will run before a client app. We can put the dataset generation code here. 
+  - Make sure the code is configureable - I mean maximum control such as the number of new images generated etc. 
+  We can share those configurations from server side in ConfigRecord - There is a problem where clients are not recieving the vars in ConfigRecord. I will debug it. For now i am using os.environ temporaririly. You can just create hardcoded Config Vars in lifespan function on top. I will migrate them to ConfigRecord Later
 
 ## Notes
 - **A** = Anas
 - **E** = Ehtisham
-- Items with "A - E" indicate shared/collaborative tasks
+- Right now there is a problem
 - Make new git feature branch for each task
 - Don't push unnecessary code changes
 - We are using flwr version 1.25.0 - make sure to refer to that version's docs to avoid incompatibility issues. Newer versions have very different APIs
