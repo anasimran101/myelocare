@@ -24,6 +24,9 @@
 - [ ] Add code for graph plots
   - Keep scripts separate, maybe in `scripts/plot` folder
   - Use in above task or wherever you see fit
+  - Script should parse `myelocare/runs/20251130/run001/server_aggregated_results/results.json` files
+  - Save and plot other matrices that should be saved. I remeber mam said something about that
+  - `results.json` is being saved in `myelocare/yolosimulation/strategy.py` script. It dumps configurations and run matrices. If you want to add something you can add it there
 
 - [ ] Move dataset generation to nodes 
   - Synthetic dataset generation should be on each node
@@ -34,6 +37,7 @@
 ## Notes
 - **A** = Anas
 - **E** = Ehtisham
+- Use v0.2 branch as your base not the master
 - Right now there is a problem
 - Make new git feature branch for each task
 - Don't push unnecessary code changes
