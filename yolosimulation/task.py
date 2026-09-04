@@ -6,7 +6,6 @@ from yolosimulation.config import *
 import json
 from datetime import datetime
 from pathlib import Path
-from flwr.common.typing import UserConfig
 
 
 # ===== FUNCTIONS =====

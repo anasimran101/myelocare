@@ -2,7 +2,6 @@ import torch
 from flwr.app import ArrayRecord, ConfigRecord, Context, MetricRecord
 from flwr.serverapp import Grid, ServerApp
 from yolosimulation.strategy import CustomFedProx, CustomFedAvg, STRATEGY_REGISTRY, load_strategy
-
 from yolosimulation.task import get_model, test, create_run_dir, make_project_name
 from yolosimulation.data_partition import create_partitions
 from yolosimulation.config import *
