@@ -1,3 +1,4 @@
 yolosimulation/__pycache__/
 runs/*/*/server_aggregated_results/*.pt
 runs/*/*/train/*/*/weights/*.pt
+datasets/
