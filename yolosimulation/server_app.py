@@ -8,7 +8,12 @@ from yolosimulation.config import *
 
 app = ServerApp()
 
+
+
 def gen_run_dir():
+    """
+        returns RUN_ID, RUN_DIR
+    """
     import os
     from pathlib import Path
     import json 
@@ -39,10 +44,8 @@ def gen_run_dir():
             "RUN_DIR": str(RUN_DIR.resolve())
         }, f, indent=2)
 
-    # Optionally, also set environment variables so clients started
-    # from this server process inherit them
-    os.environ["RUN_ID"] = RUN_ID
-    os.environ["RUN_DIR"] = str(RUN_DIR.resolve())
+    os.environ["RUN_DIR"] = str(RUN_DIR)
+    return RUN_ID, RUN_DIR
 
 @app.main()
 def main(grid: Grid, context: Context) -> None:
@@ -70,8 +73,8 @@ def main(grid: Grid, context: Context) -> None:
         strategy_name=strategy_name,
         fraction_evaluate=fraction_evaluate,
     )
-    gen_run_dir()
-    save_path, run_dir = create_run_dir(config=context.run_config)
+    RUN_ID, RUN_DIR = gen_run_dir()
+    save_path, run_dir = create_run_dir(config=context.run_config, RUN_DIR=RUN_DIR)
     strategy.set_save_path_and_run_dir(save_path, run_dir)
 
     result = strategy.start(
@@ -81,8 +84,15 @@ def main(grid: Grid, context: Context) -> None:
             "lr": lr,
             "local-epochs": local_epochs,
             "batch-size": batch_size,
-            "dataset-base": DATASET_PATH
+            "dataset-base": DATASET_PATH,
+            "run-id": RUN_ID,
+            "run-dir": str(RUN_DIR)
         }),
+        evaluate_config=ConfigRecord({
+            "run-id": RUN_ID,
+            "run-dir": str(RUN_DIR)
+        }),
+
         num_rounds=num_rounds,
         evaluate_fn=global_evaluate,
     )
@@ -92,8 +102,10 @@ def main(grid: Grid, context: Context) -> None:
     torch.save(state_dict, "final_model.pt")
 
 
-def global_evaluate(server_round: int, arrays: ArrayRecord) -> MetricRecord:
 
+# TODO:all patients val here
+def global_evaluate(server_round: int, arrays: ArrayRecord) -> MetricRecord:
+    import os
     model = get_model()
 
     model.model.load_state_dict(arrays.to_torch_state_dict())
@@ -101,7 +113,7 @@ def global_evaluate(server_round: int, arrays: ArrayRecord) -> MetricRecord:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.model.to(device)
 
-
-    project, name = make_project_name("val", f"server", server_round)
+    RUN_DIR = os.environ["RUN_DIR"]
+    project, name = make_project_name("val", f"server", server_round, RUN_DIR)
     metrics = test(model, project=project, name=name, data_path=VAL_YAML_FILE, device=device)
     return MetricRecord(metrics)

@@ -33,9 +33,9 @@ def train(msg: Message, context: Context):
     
     round_id = -1
     round_id = msg.content["config"]["server-round"]
-
+    run_dir = msg.content["config"]["run-dir"]
     # Create consistent log folders for eval too
-    project, name = make_project_name("train", f"client_{node_partition_id}", round_id)
+    project, name = make_project_name("train", f"client_{node_partition_id}", round_id, run_dir)
 
     print(context.node_config)
     print(context.run_config)
@@ -76,7 +76,9 @@ def evaluate(msg: Message, context: Context):
     # Evaluate
     round_id = -1
     round_id = msg.content["config"]["server-round"]
-    project, name = make_project_name("val", f"client_{node_partition_id}", round_id)
+
+    run_dir = msg.content["config"]["run-dir"]
+    project, name = make_project_name("val", f"client_{node_partition_id}", round_id, run_dir)
     metrics = test_fn(model,data_path=yaml_path,project=project, name=name, )  # return dict, int
     metric_record = MetricRecord(metrics)
     content = RecordDict({"metrics": metric_record})

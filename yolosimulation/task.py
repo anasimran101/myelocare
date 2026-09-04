@@ -90,21 +90,20 @@ def test(model,data_path, project = "runs", name = "train", device=DEVICE):
     return metrics
 
 
-def make_project_name(train_or_val: str, client_or_server: str, round_num: int):
+def make_project_name(train_or_val: str, client_or_server: str, round_num: int, RUN_DIR):
     """
     Returns folder for a specific round & type.
     """
-    RUN_DIR = Path(os.environ["RUN_DIR"])
-    project = RUN_DIR / train_or_val / f"round_{round_num}"
+    project = Path(RUN_DIR) / train_or_val / f"round_{round_num}"
     project.mkdir(parents=True, exist_ok=True)
     return str(project), client_or_server
 
 
-def create_run_dir(config: dict):
+def create_run_dir(config: dict, RUN_DIR):
     """
     Create a folder for aggregated server results and save config.
     """
-    RUN_DIR = Path(os.environ["RUN_DIR"])
+    RUN_DIR=Path(RUN_DIR)
     print(RUN_DIR)
     save_path = RUN_DIR / "server_aggregated_results"
     save_path.mkdir(parents=True, exist_ok=True)
