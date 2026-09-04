@@ -4,24 +4,31 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yolosimulation"
-version = "1.0.0"
+version = "0.3"
 description = "Federated Learning with YOLO and Flower"
-license = "Apache-2.0"
+license = { file = "LICENSE" }
+# Dependencies
 dependencies = [
-    "flwr[simulation]>=1.23.0",
-    "flwr-datasets[vision]>=0.5.0",
+    "flwr[simulation]>=1.28.0",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 
-[tool.flwr.app]
-publisher = "flwrlabs"
 
+[tool.flwr.app]
+publisher = "myelocare"
+fab-format-version = 1
+flwr-version-target = "1.30.0"
+fab-include = ["yolosimulation/**/*.py", "LICENSE"]
+
+# Point to your ServerApp and ClientApp objects
+# Format: "<module>:<object>"
 [tool.flwr.app.components]
 serverapp = "yolosimulation.server_app:app"
 clientapp = "yolosimulation.client_app:app"
 
+# Custom config values accessible via `context.run_config`
 [tool.flwr.app.config]
 num-server-rounds = 2
 fraction-evaluate = 0.2
@@ -32,14 +39,3 @@ num-clients = 3
 partitioner = "none"
 strategy = "FedAvg"
 
-
-[tool.flwr.federations]
-default = "local-simulation"
-
-[tool.flwr.federations.local-simulation]
-options.num-supernodes = 3
-
-[tool.flwr.federations.local-simulation-gpu]
-options.num-supernodes = 3
-options.backend.client-resources.num-cpus = 2 # each ClientApp assumes to use 1CPUs
-options.backend.client-resources.num-gpus = 0.3 # at most ClientApp will run in a given GPU concurrently
